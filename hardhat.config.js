@@ -7,8 +7,10 @@ module.exports = {
   solidity: "0.8.17",
 
   networks: {
-    chainId: 1  // this will be a env var
-  }
+    hardhat: {
+      chainId: 1,  // this will be a env var
+    },
+  },
 
   // TODO - ethernal options
 };
