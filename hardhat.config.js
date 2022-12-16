@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-// TODO - install dotenv
+require('dotenv').config();
 // TODO - install ethernal plugin
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -8,6 +8,13 @@ module.exports = {
 
   networks: {
     hardhat: {
+      forking: {
+        url: process.env.FORKING_URL,
+        mining: {
+          auto: false,
+          interval: 12000
+        }
+      },
       chainId: 1,  // this will be a env var
     },
   },

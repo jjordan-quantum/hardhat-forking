@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "set-interval-mine": "node scripts/setIntervalMine.js",
+    "inspect-mempool": "node scripts/inspectMempool.js",
+    "fork": "npx hardhat node --port 5115",
+    "hardhat-reset": ""
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,13 @@
   "homepage": "https://github.com/jjordan-quantum/hardhat-forking#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.12.2"
+    "axios": "^1.2.0",
+    "chai": "^4.3.7",
+    "hardhat": "^2.12.2",
+    "mocha": "^10.1.0",
+    "web3": "^1.8.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
